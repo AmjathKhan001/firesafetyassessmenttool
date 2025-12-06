@@ -92,6 +92,8 @@ body {
     gap: 10px;
     transition: all 0.3s ease;
     box-shadow: var(--shadow-md);
+    border: none;
+    cursor: pointer;
 }
 
 .coffee-btn:hover {
@@ -205,6 +207,92 @@ body {
     left: 0;
     color: var(--success);
     font-weight: bold;
+}
+
+/* Tools Section */
+.tools-section {
+    margin: 30px 0;
+}
+
+.tools-card {
+    background: white;
+    padding: 30px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow);
+    border-left: 5px solid var(--accent);
+}
+
+.tools-card h3 {
+    color: var(--accent);
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.tools-intro {
+    color: var(--text-medium);
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.tool-card {
+    background: var(--bg-lighter);
+    padding: 25px;
+    border-radius: var(--radius);
+    text-decoration: none;
+    color: inherit;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+.tool-card:hover {
+    border-color: var(--secondary);
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.tool-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.tool-card h4 {
+    color: var(--secondary);
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+.tool-card p {
+    color: var(--text-medium);
+    margin-bottom: 20px;
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
+
+.tool-link {
+    display: inline-block;
+    color: var(--primary);
+    font-weight: 600;
+    text-decoration: none;
+    padding: 5px 0;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.tool-card:hover .tool-link {
+    border-bottom-color: var(--primary);
 }
 
 /* Expert Section */
@@ -587,7 +675,7 @@ body {
     color: white;
 }
 
-.store-link, .support-link {
+.store-link, .support-link, .tool-link {
     display: inline-block;
     background: var(--primary);
     color: white;
@@ -597,13 +685,28 @@ body {
     margin-top: 10px;
     font-weight: 600;
     transition: all 0.3s ease;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
 }
 
 .support-link {
     background: #ff9800;
 }
 
-.store-link:hover, .support-link:hover {
+.tools-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.tool-link {
+    background: #37474f;
+    padding: 10px 15px;
+    font-size: 0.95rem;
+}
+
+.store-link:hover, .support-link:hover, .tool-link:hover {
     transform: translateY(-2px);
     box-shadow: var(--shadow-md);
 }
@@ -612,17 +715,13 @@ body {
     color: #ff9800;
     font-weight: 600;
     margin-top: 5px;
-}
-
-.support-text {
-    color: #cfd8dc;
-    font-size: 0.9rem;
-    margin-top: 5px;
+    text-align: center;
 }
 
 .contact-footer p {
     margin: 5px 0;
     color: #cfd8dc;
+    font-size: 0.9rem;
 }
 
 .footer-bottom {
@@ -658,6 +757,10 @@ body {
         font-size: 1rem;
     }
     
+    .tools-grid {
+        grid-template-columns: 1fr;
+    }
+    
     .options-grid {
         grid-template-columns: 1fr;
     }
@@ -681,11 +784,16 @@ body {
         padding: 0 15px;
     }
     
-    .intro-card, .form-section, .submit-section {
+    .intro-card, .form-section, .submit-section, .tools-card {
         padding: 20px;
     }
     
     .submit-btn {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .coffee-btn {
         width: 100%;
         justify-content: center;
     }
