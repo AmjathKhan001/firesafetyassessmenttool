@@ -7,10 +7,8 @@
     <meta name="description" content="Free 4-minute fire safety assessment for residential buildings. Based on BIS standards IS 2190. Get your safety score instantly.">
     <link rel="stylesheet" href="style.css">
     
-    <!-- Google AdSense Auto Ads -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6687860250561653" crossorigin="anonymous"></script>
     
-    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-376208036"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -20,7 +18,6 @@
     </script>
 </head>
 <body>
-    <!-- Header -->
     <header class="main-header">
         <div class="container">
             <div class="header-top">
@@ -28,7 +25,7 @@
                     <h1>🔥 Fire Safety Assessment Tool</h1>
                     <p class="tagline">Call for Participation: Residential Fire Safety Survey</p>
                 </div>
-                <a href="https://buymeacoffee.com/s.amjathkhan" target="_blank" class="coffee-btn">
+                <a href="https://buymeacoffee.com/s.amjathkhan" target="_blank" class="coffee-btn" onclick="trackCoffeeClick()">
                     <span>☕</span>
                     <span>Support This Project</span>
                 </a>
@@ -36,7 +33,6 @@
         </div>
     </header>
 
-    <!-- Amazon Banner -->
     <div class="amazon-banner">
         <div class="container">
             <a href="https://amzn.to/4p8ceG6" target="_blank" class="amazon-link" onclick="trackAmazonClick()">
@@ -49,9 +45,7 @@
         </div>
     </div>
 
-    <!-- Main Content -->
     <main class="container">
-        <!-- Introduction -->
         <section class="intro-section">
             <div class="intro-card">
                 <h2>Hello! Thank you for your interest</h2>
@@ -69,11 +63,11 @@
                         <li>Your replies help in enhancing residential building safety awareness</li>
                         <li><strong>Please fill out this form only ONCE</strong></li>
                     </ul>
+                    <a href="privacy.html" target="_blank" class="privacy-link">View Privacy Policy</a>
                 </div>
             </div>
         </section>
 
-        <!-- Contact Expert -->
         <section class="expert-section">
             <div class="expert-card">
                 <h3>👨‍🚒 Connect with a Safety Expert</h3>
@@ -95,18 +89,15 @@
             </div>
         </section>
 
-        <!-- Main Form -->
         <form id="fireSafetyForm" class="assessment-form">
             <div class="form-header">
                 <h2>Residential Fire Safety Assessment</h2>
                 <p class="required-note">* Indicates required question</p>
             </div>
 
-            <!-- Section 1: Building Details -->
             <section class="form-section">
                 <h3 class="section-title">🏢 Building Information</h3>
                 
-                <!-- Q1: Number of floors -->
                 <div class="question-block required">
                     <label class="question-label">1. How many floors are there in your residential building? *</label>
                     <div class="options-grid">
@@ -133,7 +124,6 @@
                     </div>
                 </div>
 
-                <!-- Q2: Number of families -->
                 <div class="question-block required">
                     <label class="question-label">2. How many families are living or can live in that residential building (on all floors)? *</label>
                     <div class="options-grid">
@@ -165,7 +155,6 @@
                     </div>
                 </div>
 
-                <!-- Q3: Floor number -->
                 <div class="question-block required">
                     <label class="question-label">3. In which floor do you reside? [Pick a number (0 for Ground Floor; 1 for First Floor; 2 for Second Floor; and so on)] *</label>
                     <div class="input-group">
@@ -174,7 +163,6 @@
                     </div>
                 </div>
 
-                <!-- Q11: Building age -->
                 <div class="question-block required">
                     <label class="question-label">11. What is the age of your residential building? *</label>
                     <div class="options-grid">
@@ -201,7 +189,6 @@
                     </div>
                 </div>
 
-                <!-- Q12: Distance to fire station -->
                 <div class="question-block required">
                     <label class="question-label">12. Roughly, how far is the nearest Fire Station from your residence (who responds when 101 is dialed)? *</label>
                     <div class="options-grid">
@@ -229,11 +216,9 @@
                 </div>
             </section>
 
-            <!-- Section 2: Fire Safety Equipment -->
             <section class="form-section">
                 <h3 class="section-title">🚒 Fire Safety Equipment</h3>
                 
-                <!-- Q4: Fire extinguisher in residence -->
                 <div class="question-block required">
                     <label class="question-label">4. Is there any fire extinguisher within your residence (for exclusive use in your house)? *</label>
                     <div class="image-hint">
@@ -253,109 +238,6 @@
                     </div>
                 </div>
 
-                <!-- Q5: Fire extinguisher in common area -->
-                <div class="question-block">
-                    <label class="question-label">5. Is there a fire extinguisher in the corridor/lift lobby/near the entrance of your house/flat?</label>
-                    <div class="image-hint">
-                        <div class="hint-text">Fire extinguisher in the corridor</div>
-                    </div>
-                    <div class="options-row">
-                        <label class="radio-option">
-                            <input type="radio" name="q5" value="yes">
-                            <span class="radio-btn"></span>
-                            <span class="option-text">Yes</span>
-                        </label>
-                        <label class="radio-option">
-                            <input type="radio" name="q5" value="no">
-                            <span class="radio-btn"></span>
-                            <span class="option-text">No</span>
-                        </label>
-                    </div>
-                </div>
-
-                <!-- Q6: Fire sprinkler -->
-                <div class="question-block">
-                    <label class="question-label">6. Is there a fire sprinkler installed in at least one room within your house/flat?</label>
-                    <div class="image-hint">
-                        <div class="hint-text">Fire Sprinkler</div>
-                    </div>
-                    <div class="options-row">
-                        <label class="radio-option">
-                            <input type="radio" name="q6" value="yes">
-                            <span class="radio-btn"></span>
-                            <span class="option-text">Yes</span>
-                        </label>
-                        <label class="radio-option">
-                            <input type="radio" name="q6" value="no">
-                            <span class="radio-btn"></span>
-                            <span class="option-text">No</span>
-                        </label>
-                    </div>
-                </div>
-
-                <!-- Q7: Smoke detector -->
-                <div class="question-block">
-                    <label class="question-label">7. Is there a fire detector OR smoke detector installed in at least one room of your house/flat?</label>
-                    <div class="image-hint">
-                        <div class="hint-text">Smoke Detector</div>
-                    </div>
-                    <div class="options-row">
-                        <label class="radio-option">
-                            <input type="radio" name="q7" value="yes">
-                            <span class="radio-btn"></span>
-                            <span class="option-text">Yes</span>
-                        </label>
-                        <label class="radio-option">
-                            <input type="radio" name="q7" value="no">
-                            <span class="radio-btn"></span>
-                            <span class="option-text">No</span>
-                        </label>
-                    </div>
-                </div>
-
-                <!-- Q17: Fire extinguisher in parking -->
-                <div class="question-block">
-                    <label class="question-label">17. Is there any fire extinguisher in the car parking area? (Select "Not Applicable" if open air car parking)</label>
-                    <div class="options-row">
-                        <label class="radio-option">
-                            <input type="radio" name="q17" value="yes">
-                            <span class="radio-btn"></span>
-                            <span class="option-text">Yes</span>
-                        </label>
-                        <label class="radio-option">
-                            <input type="radio" name="q17" value="no">
-                            <span class="radio-btn"></span>
-                            <span class="option-text">No</span>
-                        </label>
-                        <label class="radio-option">
-                            <input type="radio" name="q17" value="na">
-                            <span class="radio-btn"></span>
-                            <span class="option-text">Not Applicable</span>
-                        </label>
-                    </div>
-                </div>
-
-                <!-- Q19: Manual call point -->
-                <div class="question-block">
-                    <label class="question-label">19. Is there a manual call point (BREAK GLASS / PULL DOWN) in the floor of your residence?</label>
-                    <div class="image-hint">
-                        <div class="hint-text">Manual Call Point</div>
-                    </div>
-                    <div class="options-row">
-                        <label class="radio-option">
-                            <input type="radio" name="q19" value="yes">
-                            <span class="radio-btn"></span>
-                            <span class="option-text">Yes</span>
-                        </label>
-                        <label class="radio-option">
-                            <input type="radio" name="q19" value="no">
-                            <span class="radio-btn"></span>
-                            <span class="option-text">No</span>
-                        </label>
-                    </div>
-                </div>
-
-                <!-- Q20: Fire blanket -->
                 <div class="question-block required">
                     <label class="question-label">20. Do you have a Fire Blanket in the kitchen of your residence? *</label>
                     <div class="image-hint">
@@ -375,9 +257,103 @@
                     </div>
                 </div>
 
-                <!-- Q21: Fire hydrant -->
+                <div class="question-block required">
+                    <label class="question-label">7. Is there a functional Smoke Detector in your residence? *</label>
+                    <div class="image-hint">
+                        <div class="hint-text">Smoke Detector</div>
+                    </div>
+                    <div class="options-row">
+                        <label class="radio-option">
+                            <input type="radio" name="q7" value="yes" required>
+                            <span class="radio-btn"></span>
+                            <span class="option-text">Yes</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="q7" value="no">
+                            <span class="radio-btn"></span>
+                            <span class="option-text">No</span>
+                        </label>
+                    </div>
+                </div>
+                
                 <div class="question-block">
-                    <label class="question-label">21. Is there a Fire Hydrant system in your residential building (inside OR outside)?</label>
+                    <label class="question-label">6. Is there a Fire Sprinkler System installed inside your residence (not in common areas)?</label>
+                    <div class="image-hint">
+                        <div class="hint-text">Fire Sprinkler</div>
+                    </div>
+                    <div class="options-row">
+                        <label class="radio-option">
+                            <input type="radio" name="q6" value="yes">
+                            <span class="radio-btn"></span>
+                            <span class="option-text">Yes</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="q6" value="no">
+                            <span class="radio-btn"></span>
+                            <span class="option-text">No</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="q6" value="na">
+                            <span class="radio-btn"></span>
+                            <span class="option-text">Not Applicable (House/Less than 4 floors)</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <label class="question-label">18. Do you have a fire extinguisher in your work-from-home setup / office space within your residence?</label>
+                    <div class="options-row">
+                        <label class="radio-option">
+                            <input type="radio" name="q18" value="yes">
+                            <span class="radio-btn"></span>
+                            <span class="option-text">Yes</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="q18" value="no">
+                            <span class="radio-btn"></span>
+                            <span class="option-text">No</span>
+                        </label>
+                    </div>
+                </div>
+            </section>
+
+            <section class="form-section">
+                <h3 class="section-title">🚨 Building-wide Safety & Features</h3>
+                
+                <div class="question-block required">
+                    <label class="question-label">15. Is your primary escape route (Staircase / Corridor / Doorway) free from obstructions (E.g., shoes, bikes, clutter)? *</label>
+                    <div class="options-row">
+                        <label class="radio-option">
+                            <input type="radio" name="q15" value="yes" required>
+                            <span class="radio-btn"></span>
+                            <span class="option-text">Yes, completely free from obstructions</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="q15" value="no">
+                            <span class="radio-btn"></span>
+                            <span class="option-text">No, there are obstructions / clutter</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="question-block required">
+                    <label class="question-label">5. Is there a fire extinguisher available in the common area/floor landing of your residence (not inside your house)? *</label>
+                    <div class="options-row">
+                        <label class="radio-option">
+                            <input type="radio" name="q5" value="yes" required>
+                            <span class="radio-btn"></span>
+                            <span class="option-text">Yes</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="q5" value="no">
+                            <span class="radio-btn"></span>
+                            <span class="option-text">No</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <label class="question-label">21. Is there a functional Fire Hydrant / Water Sprinkler System installed in the building's common areas?</label>
                     <div class="image-hint">
                         <div class="hint-text">Fire Hydrant System</div>
                     </div>
@@ -392,20 +368,102 @@
                             <span class="radio-btn"></span>
                             <span class="option-text">No</span>
                         </label>
+                        <label class="radio-option">
+                            <input type="radio" name="q21" value="na">
+                            <span class="radio-btn"></span>
+                            <span class="option-text">Not Applicable (House/Less than 4 floors)</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <label class="question-label">19. Is there a manual call point (BREAK GLASS / PULL DOWN) in the floor of your residence?</label>
+                    <div class="image-hint">
+                        <div class="hint-text">Manual Call Point</div>
+                    </div>
+                    <div class="options-row">
+                        <label class="radio-option">
+                            <input type="radio" name="q19" value="yes">
+                            <span class="radio-btn"></span>
+                            <span class="option-text">Yes</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="q19" value="no">
+                            <span class="radio-btn"></span>
+                            <span class="option-text">No</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <label class="question-label">16. Do you use the ground floor or basement for car/vehicle parking?</label>
+                    <div class="options-row">
+                        <label class="radio-option">
+                            <input type="radio" name="q16" value="yes">
+                            <span class="radio-btn"></span>
+                            <span class="option-text">Yes</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="q16" value="no">
+                            <span class="radio-btn"></span>
+                            <span class="option-text">No</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="q16" value="na">
+                            <span class="radio-btn"></span>
+                            <span class="option-text">Not Applicable (No vehicle/No dedicated parking)</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <label class="question-label">17. If you use the parking area, is there a fire extinguisher available in the common parking area?</label>
+                    <div class="options-row">
+                        <label class="radio-option">
+                            <input type="radio" name="q17" value="yes">
+                            <span class="radio-btn"></span>
+                            <span class="option-text">Yes</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="q17" value="no">
+                            <span class="radio-btn"></span>
+                            <span class="option-text">No</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="q17" value="na">
+                            <span class="radio-btn"></span>
+                            <span class="option-text">Not Applicable</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <label class="question-label">14. Is there a balcony in your residence? (only ground floor residents may opt "Not Applicable")</label>
+                    <div class="options-row">
+                        <label class="radio-option">
+                            <input type="radio" name="q14" value="yes">
+                            <span class="radio-btn"></span>
+                            <span class="option-text">Yes</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="q14" value="no">
+                            <span class="radio-btn"></span>
+                            <span class="option-text">No</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="q14" value="na">
+                            <span class="radio-btn"></span>
+                            <span class="option-text">Not Applicable (Reside on Ground Floor)</span>
+                        </label>
                     </div>
                 </div>
             </section>
-
-            <!-- Section 3: Usage & Experience -->
+            
             <section class="form-section">
-                <h3 class="section-title">📊 Usage & Experience</h3>
+                <h3 class="section-title">🧠 Awareness & Training</h3>
                 
-                <!-- Q8: Used extinguisher -->
                 <div class="question-block">
-                    <label class="question-label">8. Did you (or your family member) ever happen to use the fire extinguisher in your house/residence?</label>
-                    <div class="image-hint">
-                        <div class="hint-text">Fire Extinguisher Use</div>
-                    </div>
+                    <label class="question-label">8. Have you, or any member of your household, ever used a fire extinguisher (during an emergency or a training)?</label>
                     <div class="options-row">
                         <label class="radio-option">
                             <input type="radio" name="q8" value="yes">
@@ -419,10 +477,9 @@
                         </label>
                     </div>
                 </div>
-
-                <!-- Q9: Neighbor used extinguisher -->
+                
                 <div class="question-block">
-                    <label class="question-label">9. Did you ever notice/come to know if your neighbor used a fire extinguisher in his/her house OR by staff in any other building of your housing complex?</label>
+                    <label class="question-label">9. Have you heard of or witnessed a neighbor successfully using a fire extinguisher in the past 5 years?</label>
                     <div class="options-row">
                         <label class="radio-option">
                             <input type="radio" name="q9" value="yes">
@@ -437,9 +494,24 @@
                     </div>
                 </div>
 
-                <!-- Q10: Firemen visit -->
                 <div class="question-block">
-                    <label class="question-label">10. Was there any visit by firemen/fire engine within the last 10 years in your residential building/in any building within your housing complex?</label>
+                    <label class="question-label">13. Whether any Fire Drill was conducted in your residential building, in the last 5 years?</label>
+                    <div class="options-row">
+                        <label class="radio-option">
+                            <input type="radio" name="q13" value="yes">
+                            <span class="radio-btn"></span>
+                            <span class="option-text">Yes</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="q13" value="no">
+                            <span class="radio-btn"></span>
+                            <span class="option-text">No</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="question-block">
+                    <label class="question-label">10. Have Firemen / Fire Safety personnel visited or interacted with residents within your housing complex?</label>
                     <div class="image-hint">
                         <div class="hint-text">Fire Engine</div>
                     </div>
@@ -457,125 +529,6 @@
                     </div>
                 </div>
 
-                <!-- Q13: Fire drill -->
-                <div class="question-block">
-                    <label class="question-label">13. Whether any Fire Drill was conducted in your residential building, in the last 5 years?</label>
-                    <div class="options-row">
-                        <label class="radio-option">
-                            <input type="radio" name="q13" value="yes">
-                            <span class="radio-btn"></span>
-                            <span class="option-text">Yes</span>
-                        </label>
-                        <label class="radio-option">
-                            <input type="radio" name="q13" value="no">
-                            <span class="radio-btn"></span>
-                            <span class="option-text">No</span>
-                        </label>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Section 4: Building Features -->
-            <section class="form-section">
-                <h3 class="section-title">🏠 Building Features</h3>
-                
-                <!-- Q14: Balcony -->
-                <div class="question-block">
-                    <label class="question-label">14. Is there a balcony in your residence? (only ground floor residents may opt "Not Applicable")</label>
-                    <div class="options-row">
-                        <label class="radio-option">
-                            <input type="radio" name="q14" value="yes">
-                            <span class="radio-btn"></span>
-                            <span class="option-text">Yes</span>
-                        </label>
-                        <label class="radio-option">
-                            <input type="radio" name="q14" value="no">
-                            <span class="radio-btn"></span>
-                            <span class="option-text">No</span>
-                        </label>
-                        <label class="radio-option">
-                            <input type="radio" name="q14" value="na">
-                            <span class="radio-btn"></span>
-                            <span class="option-text">Not Applicable</span>
-                        </label>
-                    </div>
-                </div>
-
-                <!-- Q15: Escape routes -->
-                <div class="question-block required">
-                    <label class="question-label">15. How many Escape Routes/Staircases/Doors are available to get out from your residence in case of emergency? *</label>
-                    <div class="image-hint">
-                        <div class="hint-text">Fire Emergency Exit</div>
-                    </div>
-                    <div class="options-grid">
-                        <label class="radio-option">
-                            <input type="radio" name="q15" value="1" required>
-                            <span class="radio-btn"></span>
-                            <span class="option-text">1</span>
-                        </label>
-                        <label class="radio-option">
-                            <input type="radio" name="q15" value="2">
-                            <span class="radio-btn"></span>
-                            <span class="option-text">2</span>
-                        </label>
-                        <label class="radio-option">
-                            <input type="radio" name="q15" value="3">
-                            <span class="radio-btn"></span>
-                            <span class="option-text">3</span>
-                        </label>
-                        <label class="radio-option">
-                            <input type="radio" name="q15" value="4">
-                            <span class="radio-btn"></span>
-                            <span class="option-text">4</span>
-                        </label>
-                    </div>
-                </div>
-
-                <!-- Q16: Car parking -->
-                <div class="question-block">
-                    <label class="question-label">16. Is Car Parking available in any floor (stilt OR ground OR basement) within your building?</label>
-                    <div class="options-row">
-                        <label class="radio-option">
-                            <input type="radio" name="q16" value="yes">
-                            <span class="radio-btn"></span>
-                            <span class="option-text">Yes</span>
-                        </label>
-                        <label class="radio-option">
-                            <input type="radio" name="q16" value="no">
-                            <span class="radio-btn"></span>
-                            <span class="option-text">No</span>
-                        </label>
-                        <label class="radio-option">
-                            <input type="radio" name="q16" value="na">
-                            <span class="radio-btn"></span>
-                            <span class="option-text">Not Applicable</span>
-                        </label>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Section 5: Awareness & Workplace -->
-            <section class="form-section">
-                <h3 class="section-title">🎓 Awareness & Workplace</h3>
-                
-                <!-- Q18: Workplace extinguisher -->
-                <div class="question-block required">
-                    <label class="question-label">18. Is there a fire extinguisher in the building where you Work or Study? *</label>
-                    <div class="options-row">
-                        <label class="radio-option">
-                            <input type="radio" name="q18" value="yes" required>
-                            <span class="radio-btn"></span>
-                            <span class="option-text">Yes</span>
-                        </label>
-                        <label class="radio-option">
-                            <input type="radio" name="q18" value="no">
-                            <span class="radio-btn"></span>
-                            <span class="option-text">No</span>
-                        </label>
-                    </div>
-                </div>
-
-                <!-- Q22: ISI awareness -->
                 <div class="question-block required">
                     <label class="question-label">22. Are you aware that ISI marked Fire Extinguishers all type (As per IS 15683) are available for purchase and use in residences? *</label>
                     <div class="options-row">
@@ -592,85 +545,28 @@
                     </div>
                 </div>
             </section>
-
-            <!-- Progress Bar -->
-            <div class="progress-section">
-                <div class="progress-info">
-                    <span class="progress-label">Survey Progress</span>
-                    <span class="progress-percent" id="progressPercent">0%</span>
-                </div>
-                <div class="progress-bar">
-                    <div class="progress-fill" id="progressFill" style="width: 0%"></div>
-                </div>
-                <div class="progress-stats" id="progressStats">0 of 22 questions answered</div>
-            </div>
-
-            <!-- Submit Section -->
+            
             <div class="submit-section">
                 <button type="submit" class="submit-btn">
-                    <span class="btn-text">Get Your Fire Safety Score</span>
-                    <span class="btn-icon">🚒</span>
+                    Get My Safety Score & Report →
                 </button>
-                
-                <div class="submit-info">
-                    <div class="info-item">
-                        <span class="info-icon">⏱️</span>
-                        <span>Takes only 4 minutes</span>
-                    </div>
-                    <div class="info-item">
-                        <span class="info-icon">🔒</span>
-                        <span>100% anonymous</span>
-                    </div>
-                    <div class="info-item">
-                        <span class="info-icon">📊</span>
-                        <span>Instant results</span>
-                    </div>
-                </div>
-                
-                <p class="privacy-note">
-                    <em>This content is neither created nor endorsed by Google.</em><br>
-                    Based on Indian Standard IS 2190 for selection, installation and maintenance of first-aid fire extinguishers.
-                </p>
             </div>
         </form>
     </main>
 
-    <!-- Footer -->
     <footer class="main-footer">
         <div class="container">
-            <div class="footer-grid">
-                <div class="footer-column">
-                    <h3>Essential Links</h3>
-                    <ul class="footer-links">
-                        <li><a href="https://www.safetyguide360.com" target="_blank">Safety Guide 360</a></li>
-                        <li><a href="https://www.manakonline.in" target="_blank">BIS ManakOnline</a></li>
-                        <li><a href="privacy.html" target="_blank">Privacy Policy</a></li>
-                    </ul>
+            <div class="footer-content">
+                <div class="standards-info">
+                    <h3>Based on BIS Standards</h3>
+                    <p>Indian Standard IS 2190: Code of practice for selection, installation and maintenance of first-aid fire extinguishers</p>
+                    <p>ISI Mark IS 15683: For portable fire extinguishers</p>
                 </div>
-                
-                <div class="footer-column">
-                    <h3>Fire Safety Store</h3>
-                    <a href="https://amzn.to/4p8ceG6" target="_blank" class="store-link" onclick="trackAmazonClick()">
-                        🔥 Shop Safety Equipment
-                    </a>
-                    <p class="store-discount">Up to 70% OFF</p>
-                </div>
-                
-                <div class="footer-column">
-                    <h3>Support This Project</h3>
-                    <a href="https://buymeacoffee.com/s.amjathkhan" target="_blank" class="support-link">
-                        ☕ Buy Me a Coffee
-                    </a>
-                    <p class="support-text">Help keep this tool free for everyone</p>
-                </div>
-                
-                <div class="footer-column">
-                    <h3>Contact Expert</h3>
-                    <div class="contact-footer">
-                        <p><strong>Amjath Khan</strong></p>
-                        <p>Fire & Life Safety Consultant</p>
-                        <p>📞 +91-9750816163</p>
-                    </div>
+                <div class="contact-footer">
+                    <h3>Contact Consultant</h3>
+                    <p>Amjath Khan</p>
+                    <p>samajthkhan.official@gmail.com</p>
+                    <p>📞 +91-9750816163</p>
                 </div>
             </div>
             
@@ -681,7 +577,6 @@
         </div>
     </footer>
 
-    <!-- JavaScript -->
     <script src="script.js"></script>
     <script>
         function trackAmazonClick() {
@@ -700,14 +595,12 @@
         
         // Add event listeners for support buttons
         document.addEventListener('DOMContentLoaded', function() {
-            const coffeeBtn = document.querySelector('.coffee-btn');
-            const supportLink = document.querySelector('.support-link');
-            
-            if (coffeeBtn) {
-                coffeeBtn.addEventListener('click', trackCoffeeClick);
-            }
-            if (supportLink) {
-                supportLink.addEventListener('click', trackCoffeeClick);
+            const form = document.getElementById('fireSafetyForm');
+            if (form) {
+                form.addEventListener('submit', function(event) {
+                    event.preventDefault();
+                    calculateAndShowResults();
+                });
             }
         });
     </script>
