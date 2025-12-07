@@ -1,4 +1,4 @@
-// Question weights (importance scores)
+// Question weights (importance scores) - Updated with correct question mapping
 const questionWeights = {
     q1: 3,    // Number of floors
     q2: 2,    // Number of families
@@ -27,21 +27,24 @@ const questionWeights = {
 // Maximum possible score
 const maxScore = Object.values(questionWeights).reduce((a, b) => a + b, 0);
 
-// Positive answers for scoring
+// Positive answers for scoring - Updated to match your form
 const positiveAnswers = {
+    q1: ['2', '3-4'],  // Lower buildings are generally safer
+    q2: ['1-5', '6-10'], // Smaller number of families
+    q3: ['0', '1', '2'], // Lower floors safer for evacuation
     q4: 'yes',      // Extinguisher in residence
     q5: 'yes',      // Extinguisher in common area
     q6: 'yes',      // Fire sprinkler
     q7: 'yes',      // Smoke detector
-    q8: 'yes',      // Used extinguisher (experience)
-    q9: 'yes',      // Neighbor used (awareness)
-    q10: 'no',      // No firemen visit (no incidents)
-    q11: '<4',      // Newer building (<4 years)
+    q8: 'yes',      // Used extinguisher (experience is good)
+    q9: 'no',       // No neighbor incidents
+    q10: 'no',      // No firemen visits (no emergencies)
+    q11: '<4',      // Newer building
     q12: '<5',      // Close to fire station
     q13: 'yes',     // Fire drill conducted
-    q14: 'yes',     // Has balcony
+    q14: 'yes',     // Has balcony (alternative escape)
     q15: ['2', '3', '4'],  // Multiple escape routes
-    q16: 'yes',     // Has car parking
+    q16: 'yes',     // Has designated parking
     q17: 'yes',     // Extinguisher in parking
     q18: 'yes',     // Workplace has extinguisher
     q19: 'yes',     // Manual call point
@@ -50,27 +53,30 @@ const positiveAnswers = {
     q22: 'yes'      // Aware of ISI marks
 };
 
-// Recommendations for each question
+// Recommendations for each question - Updated to match categories
 const recommendations = {
-    q4: "🚨 HIGH PRIORITY: Install a portable fire extinguisher in your residence. ABC-type extinguishers are suitable for most home fires.",
-    q5: "⚠️ MEDIUM PRIORITY: Ensure fire extinguishers are available in common areas like corridors and lift lobbies.",
-    q6: "💡 RECOMMENDED: Consider installing fire sprinklers for automatic fire suppression.",
-    q7: "🚨 HIGH PRIORITY: Install smoke detectors on every floor, especially near bedrooms. Test them monthly.",
-    q8: "💡 TIP: Practice using a fire extinguisher with PASS technique (Pull, Aim, Squeeze, Sweep).",
-    q9: "💡 AWARENESS: Learn from neighbors' experiences. Discuss fire safety with your building community.",
-    q10: "⚠️ WARNING: Frequent fire department visits indicate higher risk areas. Be extra vigilant.",
-    q11: "💡 NOTE: Older buildings may need electrical and fire safety upgrades.",
-    q12: "⚠️ CONSIDERATION: If far from fire station, ensure better on-site firefighting capability.",
-    q13: "🚨 HIGH PRIORITY: Conduct regular fire drills. All residents should know evacuation routes.",
-    q14: "💡 TIP: Balconies can serve as secondary escape routes. Keep them accessible.",
-    q15: "🚨 CRITICAL: Ensure at least 2 clear escape routes. Remove all obstructions immediately.",
-    q16: "💡 NOTE: Underground parking increases fire risk. Ensure proper ventilation and fire safety.",
-    q17: "⚠️ MEDIUM PRIORITY: Install fire extinguishers in parking areas.",
-    q18: "💡 AWARENESS: Check your workplace/school fire safety measures too.",
-    q19: "⚠️ MEDIUM PRIORITY: Manual call points help quick alarm activation.",
-    q20: "🚨 HIGH PRIORITY: Keep a fire blanket in kitchen for grease fires.",
-    q21: "⚠️ MEDIUM PRIORITY: Ensure fire hydrant system is functional and accessible.",
-    q22: "💡 IMPORTANT: Always purchase BIS/ISI marked fire safety equipment (IS 15683)."
+    q1: "💡 Consider: Higher buildings require more safety measures. Ensure all fire safety systems are properly maintained.",
+    q2: "💡 Note: More families mean higher evacuation complexity. Regular drills are essential.",
+    q3: "💡 Tip: Higher floors need more escape route planning. Know your building's evacuation plan.",
+    q4: "🚨 HIGH PRIORITY: Install at least one ABC-type fire extinguisher in your residence. Keep it accessible and know how to use it.",
+    q5: "⚠️ MEDIUM PRIORITY: Ensure fire extinguishers are available in common areas. They should be visible and easily accessible.",
+    q6: "💡 RECOMMENDED: Consider installing fire sprinklers. They provide automatic protection even when you're not home.",
+    q7: "🚨 HIGH PRIORITY: Install smoke detectors on every floor, especially near bedrooms. Test them monthly and replace batteries annually.",
+    q8: "💡 EXPERIENCE: Practice using fire extinguishers regularly. Remember PASS: Pull, Aim, Squeeze, Sweep.",
+    q9: "💡 AWARENESS: Learn from neighbors' experiences. Share safety knowledge within your building community.",
+    q10: "⚠️ WARNING: If there have been fire incidents, review and improve your safety measures immediately.",
+    q11: "💡 NOTE: Older buildings may need electrical safety upgrades. Check wiring and fire safety systems regularly.",
+    q12: "⚠️ CONSIDERATION: If far from fire station, invest in better on-site firefighting equipment and training.",
+    q13: "🚨 HIGH PRIORITY: Conduct fire drills at least twice a year. All residents should know evacuation routes and assembly points.",
+    q14: "💡 TIP: Balconies can serve as secondary escape routes. Keep them clear and accessible at all times.",
+    q15: "🚨 CRITICAL: Ensure at least 2 clear escape routes. Remove all obstructions immediately. Practice using different exits.",
+    q16: "💡 SAFETY: Designated parking areas should be well-ventilated and free from fire hazards.",
+    q17: "⚠️ MEDIUM PRIORITY: Install fire extinguishers in parking areas. Vehicle fires can spread quickly.",
+    q18: "💡 AWARENESS: Your workplace safety matters too. Ensure proper fire safety measures at your office/school.",
+    q19: "⚠️ MEDIUM PRIORITY: Manual call points help quick alarm activation. Ensure they're accessible and functional.",
+    q20: "🚨 HIGH PRIORITY: Keep a fire blanket in kitchen. It's essential for grease fires. Know how to use it properly.",
+    q21: "⚠️ MEDIUM PRIORITY: Fire hydrant systems should be regularly inspected and maintained. Know their locations.",
+    q22: "💡 IMPORTANT: Always purchase BIS/ISI marked fire safety equipment (IS 15683). Look for the ISI mark for quality assurance."
 };
 
 // Initialize when page loads
@@ -79,22 +85,26 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Add change listeners to all inputs
     const form = document.getElementById('fireSafetyForm');
-    const inputs = form.querySelectorAll('input, select, textarea');
-    
-    inputs.forEach(input => {
-        input.addEventListener('change', updateProgress);
-    });
-    
-    // Handle form submission
-    form.addEventListener('submit', function(e) {
-        e.preventDefault();
-        calculateAndShowResults();
-    });
+    if (form) {
+        const inputs = form.querySelectorAll('input, select, textarea');
+        
+        inputs.forEach(input => {
+            input.addEventListener('change', updateProgress);
+        });
+        
+        // Handle form submission
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            calculateAndShowResults();
+        });
+    }
 });
 
 // Update progress bar
 function updateProgress() {
     const form = document.getElementById('fireSafetyForm');
+    if (!form) return;
+    
     const inputs = form.querySelectorAll('input[type="radio"]:checked, input[type="number"]:not(:placeholder-shown), select:not([value=""])');
     
     const totalQuestions = 22; // Total questions in the form
@@ -102,14 +112,20 @@ function updateProgress() {
     const percentage = Math.round((answered / totalQuestions) * 100);
     
     // Update progress bar
-    document.getElementById('progressFill').style.width = percentage + '%';
-    document.getElementById('progressPercent').textContent = percentage + '%';
-    document.getElementById('progressStats').textContent = answered + ' of ' + totalQuestions + ' questions answered';
+    const progressFill = document.getElementById('progressFill');
+    const progressPercent = document.getElementById('progressPercent');
+    const progressStats = document.getElementById('progressStats');
+    
+    if (progressFill) progressFill.style.width = percentage + '%';
+    if (progressPercent) progressPercent.textContent = percentage + '%';
+    if (progressStats) progressStats.textContent = answered + ' of ' + totalQuestions + ' questions answered';
 }
 
 // Calculate score
 function calculateScore() {
     const form = document.getElementById('fireSafetyForm');
+    if (!form) return null;
+    
     let totalScore = 0;
     let maxPossible = 0;
     let missingAnswers = [];
@@ -135,6 +151,8 @@ function calculateScore() {
             answer = selected ? selected.value : null;
         } else if (element.type === 'number') {
             answer = element.value;
+        } else {
+            answer = element.value;
         }
         
         if (!answer) {
@@ -158,8 +176,10 @@ function calculateScore() {
             // Add to risk areas if negative answer
             riskAreas.push({
                 question: i,
+                questionKey: questionKey,
                 answer: answer,
-                recommendation: recommendations[questionKey] || "Review this safety aspect"
+                recommendation: recommendations[questionKey] || "Review this safety aspect",
+                weight: weight
             });
         }
     }
@@ -173,7 +193,8 @@ function calculateScore() {
         percentage: percentageScore,
         missing: missingAnswers,
         riskAreas: riskAreas,
-        totalQuestions: 22
+        totalQuestions: 22,
+        answered: 22 - missingAnswers.length
     };
 }
 
@@ -184,35 +205,35 @@ function getSafetyLevel(percentage) {
             level: "Excellent Safety",
             color: "#4CAF50",
             icon: "✅",
-            description: "Your building has excellent fire safety measures. Maintain regular checks."
+            description: "Your building has excellent fire safety measures. Maintain regular checks and continue safety awareness."
         };
     } else if (percentage >= 70) {
         return {
             level: "Good Safety",
             color: "#8BC34A",
             icon: "👍",
-            description: "Good fire safety measures in place. Address the recommendations below."
+            description: "Good fire safety measures in place. Address the recommendations below to achieve excellent safety."
         };
     } else if (percentage >= 50) {
         return {
             level: "Moderate Safety",
             color: "#FFC107",
             icon: "⚠️",
-            description: "Moderate fire safety. Important improvements needed."
+            description: "Moderate fire safety. Important improvements needed. Focus on high priority recommendations."
         };
     } else if (percentage >= 30) {
         return {
             level: "Needs Improvement",
             color: "#FF9800",
             icon: "🔔",
-            description: "Significant fire safety improvements required."
+            description: "Significant fire safety improvements required. Address critical issues immediately."
         };
     } else {
         return {
             level: "High Risk",
             color: "#F44336",
             icon: "🚨",
-            description: "Immediate action required to address fire safety issues."
+            description: "Immediate action required to address critical fire safety issues. Safety should be top priority."
         };
     }
 }
@@ -220,6 +241,11 @@ function getSafetyLevel(percentage) {
 // Calculate and show results
 function calculateAndShowResults() {
     const results = calculateScore();
+    if (!results) {
+        alert('Please fill in the form to get your safety score.');
+        return;
+    }
+    
     const safetyLevel = getSafetyLevel(results.percentage);
     
     // Store results in sessionStorage for report.html
@@ -228,6 +254,7 @@ function calculateAndShowResults() {
         safetyLevel: safetyLevel,
         riskAreas: results.riskAreas,
         missing: results.missing,
+        answered: results.answered,
         timestamp: new Date().toISOString()
     }));
     
@@ -251,6 +278,16 @@ function trackCoffeeClick() {
         gtag('event', 'coffee_click', {
             'event_category': 'support',
             'event_label': 'buy_me_coffee_click'
+        });
+    }
+}
+
+// Utility function for tool tracking
+function trackToolClick(toolName) {
+    if (typeof gtag !== 'undefined') {
+        gtag('event', 'tool_click', {
+            'event_category': 'tools',
+            'event_label': toolName
         });
     }
 }
