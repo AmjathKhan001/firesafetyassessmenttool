@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Fire Safety Assessment Report</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Your personalized fire safety assessment report with safety score, recommendations, and 30-day action plan.">
+    <meta name="keywords" content="fire safety report, safety assessment, fire safety recommendations, safety score">
+    
     <link rel="stylesheet" href="style.css">
     
     <!-- Google AdSense -->
@@ -28,7 +33,7 @@
         }
         
         .report-header h1 {
-            color: #d32f2f;
+            color: #ff4c4c;
             font-size: 2.5rem;
             margin-bottom: 10px;
         }
@@ -62,7 +67,7 @@
             justify-content: center;
             align-items: center;
             position: relative;
-            background: conic-gradient(#4CAF50 0%, #f0f0f0 0% 100%);
+            background: conic-gradient(#34bf49 0%, #f0f0f0 0% 100%);
         }
         
         .score-circle:before {
@@ -77,7 +82,7 @@
         .score-value {
             font-size: 3.5rem;
             font-weight: 700;
-            color: #2c3e50;
+            color: #000000;
             position: relative;
             z-index: 1;
         }
@@ -98,12 +103,12 @@
         .score-details h2 {
             font-size: 2.2rem;
             margin-bottom: 15px;
-            color: #2c3e50;
+            color: #000000;
         }
         
         .safety-desc {
             font-size: 1.1rem;
-            color: #546e7a;
+            color: #333;
             margin-bottom: 25px;
             line-height: 1.6;
         }
@@ -123,14 +128,14 @@
         
         .meta-label {
             display: block;
-            color: #78909c;
+            color: #666;
             font-size: 0.9rem;
             margin-bottom: 5px;
         }
         
         .meta-value {
             font-weight: 600;
-            color: #2c3e50;
+            color: #000000;
         }
         
         .priority-categories {
@@ -148,20 +153,21 @@
         }
         
         .priority-card.critical {
-            border-top: 5px solid #f44336;
+            border-top: 5px solid #ff4c4c;
         }
         
         .priority-card.high {
-            border-top: 5px solid #ff9800;
+            border-top: 5px solid #ff9900;
         }
         
         .priority-card.medium {
-            border-top: 5px solid #2196f3;
+            border-top: 5px solid #34bf49;
         }
         
         .priority-card h3 {
             margin-bottom: 20px;
             font-size: 1.4rem;
+            color: #000000;
         }
         
         .recommendation-item {
@@ -169,17 +175,18 @@
             padding: 15px;
             margin-bottom: 15px;
             border-radius: 8px;
-            border-left: 4px solid #1976d2;
+            border-left: 4px solid #0099e5;
             line-height: 1.5;
+            color: #333;
         }
         
         .priority-card.critical .recommendation-item {
-            border-left-color: #f44336;
+            border-left-color: #ff4c4c;
             background: #ffebee;
         }
         
         .priority-card.high .recommendation-item {
-            border-left-color: #ff9800;
+            border-left-color: #ff9900;
             background: #fff3e0;
         }
         
@@ -221,14 +228,14 @@
             width: 15px;
             height: 15px;
             border-radius: 50%;
-            background: #1976d2;
+            background: #0099e5;
             z-index: 1;
         }
         
-        .timeline-item.week1:before { background: #f44336; }
-        .timeline-item.week2:before { background: #ff9800; }
-        .timeline-item.week3:before { background: #2196f3; }
-        .timeline-item.week4:before { background: #4caf50; }
+        .timeline-item.week1:before { background: #ff4c4c; }
+        .timeline-item.week2:before { background: #ff9900; }
+        .timeline-item.week3:before { background: #0099e5; }
+        .timeline-item.week4:before { background: #34bf49; }
         
         .timeline-header {
             margin-bottom: 15px;
@@ -236,7 +243,7 @@
         
         .timeline-week {
             display: inline-block;
-            background: #2c3e50;
+            background: #000000;
             color: white;
             padding: 6px 15px;
             border-radius: 20px;
@@ -247,7 +254,7 @@
         .timeline-title {
             font-size: 1.2rem;
             font-weight: 600;
-            color: #2c3e50;
+            color: #000000;
         }
         
         .timeline-tasks {
@@ -260,9 +267,10 @@
             padding: 12px 20px;
             margin-bottom: 10px;
             border-radius: 8px;
-            border-left: 4px solid #1976d2;
+            border-left: 4px solid #0099e5;
             box-shadow: 0 2px 8px rgba(0,0,0,0.05);
             position: relative;
+            color: #333;
         }
         
         .timeline-tasks li:before {
@@ -273,7 +281,7 @@
             transform: translateY(-50%);
             width: 20px;
             height: 20px;
-            background: #4caf50;
+            background: #34bf49;
             color: white;
             border-radius: 50%;
             display: flex;
@@ -287,7 +295,7 @@
         }
         
         .more-tools-card {
-            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            background: linear-gradient(135deg, #ff4c4c 0%, #0099e5 100%);
             color: white;
             padding: 30px;
             border-radius: 15px;
@@ -320,12 +328,14 @@
             display: flex;
             align-items: center;
             gap: 10px;
+            color: white;
         }
         
         .tool-item p {
             opacity: 0.9;
             font-size: 0.95rem;
             line-height: 1.5;
+            color: rgba(255, 255, 255, 0.9);
         }
         
         .tool-link-report {
@@ -364,7 +374,7 @@
         .product-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 8px 32px rgba(0,0,0,0.15);
-            border-color: #1976d2;
+            border-color: #0099e5;
         }
         
         .product-icon {
@@ -373,7 +383,7 @@
         }
         
         .product-card h3 {
-            color: #2c3e50;
+            color: #000000;
             margin-bottom: 10px;
         }
         
@@ -385,7 +395,7 @@
         
         .product-cta {
             display: inline-block;
-            background: #1976d2;
+            background: #0099e5;
             color: white;
             padding: 8px 20px;
             border-radius: 20px;
@@ -416,17 +426,17 @@
         }
         
         .print-btn {
-            background: #2196f3;
+            background: #0099e5;
             color: white;
         }
         
         .pdf-btn {
-            background: #4caf50;
+            background: #34bf49;
             color: white;
         }
         
         .retake-btn {
-            background: #ff9800;
+            background: #ff9900;
             color: white;
         }
         
@@ -448,14 +458,83 @@
             padding: 25px;
             border-radius: 12px;
             margin-bottom: 25px;
-            border-left: 5px solid #4caf50;
+            border-left: 5px solid #34bf49;
+            color: #333;
         }
         
         .disclaimer-box {
             background: #fff3e0;
             padding: 25px;
             border-radius: 12px;
-            border-left: 5px solid #ff9800;
+            border-left: 5px solid #ff9900;
+            color: #333;
+        }
+        
+        /* Complete Tools Section */
+        .complete-tools-section {
+            margin: 50px 0;
+            padding: 30px;
+            background: var(--bg-lighter);
+            border-radius: var(--radius-lg);
+        }
+        
+        .complete-tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .tools-category-box {
+            background: white;
+            padding: 25px;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow);
+            border-top: 4px solid var(--primary);
+        }
+        
+        .tools-category-box:nth-child(2) {
+            border-top-color: var(--accent);
+        }
+        
+        .tools-category-box:nth-child(3) {
+            border-top-color: var(--secondary);
+        }
+        
+        .tools-category-title {
+            color: var(--text-dark);
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--border);
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .tools-links-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .tool-link-box {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            background: var(--bg-lighter);
+            border-radius: var(--radius);
+            text-decoration: none;
+            color: var(--text-dark);
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+        
+        .tool-link-box:hover {
+            border-color: var(--secondary);
+            transform: translateX(5px);
+            background: white;
+            box-shadow: var(--shadow);
         }
         
         @media (max-width: 768px) {
@@ -501,20 +580,21 @@
                 justify-content: center;
             }
             
-            .tools-list {
+            .tools-list, .complete-tools-grid {
                 grid-template-columns: 1fr;
             }
         }
         
         @media print {
             .amazon-banner, .coffee-btn, .action-buttons, .support-section,
-            .product-card, .website-btn, .more-tools-section {
+            .product-card, .website-btn, .more-tools-section, .complete-tools-section {
                 display: none !important;
             }
             
             body {
                 font-size: 12pt;
                 background: white !important;
+                color: black !important;
             }
             
             .container {
@@ -531,6 +611,11 @@
             
             .action-plan, .products-section {
                 page-break-before: always;
+            }
+            
+            a {
+                color: black !important;
+                text-decoration: none !important;
             }
         }
     </style>
@@ -659,30 +744,123 @@
             </div>
         </section>
 
-        <!-- More Tools Section -->
-        <section class="more-tools-section">
-            <h2 class="section-title">🔧 Explore More Expert Tools</h2>
-            <p>We highly recommend these specialized safety and utility tools for comprehensive safety management:</p>
+        <!-- Complete Tools Section -->
+        <section class="complete-tools-section">
+            <h2 class="section-title">🛠️ Complete Fire Safety & Utility Toolkits</h2>
+            <p class="tools-intro">Explore our comprehensive collection of specialized tools for safety professionals and building owners:</p>
             
-            <div class="more-tools-card">
-                <h3>Professional Safety & Utility Calculators</h3>
-                <div class="tools-list">
-                    <div class="tool-item">
-                        <h4>🔥 Fire Safety Tool</h4>
-                        <p>Comprehensive fire safety calculators, risk assessments, compliance tools, and professional resources for building owners and safety professionals.</p>
-                        <a href="https://www.firesafetytool.com" target="_blank" class="tool-link-report" onclick="trackToolClick('Fire Safety Tool')">Visit Tool →</a>
+            <div class="complete-tools-grid">
+                <!-- Fire Safety Tools -->
+                <div class="tools-category-box">
+                    <h3 class="tools-category-title">🔥 Fire Safety Tools</h3>
+                    <div class="tools-links-list">
+                        <a href="https://www.firesafetytool.com" target="_blank" class="tool-link-box" onclick="trackToolClick('Fire Safety Calculators')">
+                            <span class="tool-icon">🧮</span>
+                            <div class="tool-info">
+                                <h4>Fire Safety Calculators</h4>
+                                <p>Comprehensive fire safety calculators & tools</p>
+                            </div>
+                        </a>
+                        
+                        <a href="https://safetyguide360-ceilingmounted-firee.vercel.app/" target="_blank" class="tool-link-box" onclick="trackToolClick('Ceiling Mounted Fire Extinguisher')">
+                            <span class="tool-icon">⬆️</span>
+                            <div class="tool-info">
+                                <h4>Ceiling Mounted Fire Extinguisher</h4>
+                                <p>Estimation tool for ceiling installations</p>
+                            </div>
+                        </a>
+                        
+                        <a href="https://fire-extinguisher-audit-tool.vercel.app/" target="_blank" class="tool-link-box" onclick="trackToolClick('Fire Extinguisher Audit')">
+                            <span class="tool-icon">✅</span>
+                            <div class="tool-info">
+                                <h4>Fire Extinguisher Audit Tool</h4>
+                                <p>Health checkup & compliance auditing</p>
+                            </div>
+                        </a>
+                        
+                        <a href="https://fire-extinguisher-calculator.vercel.app/" target="_blank" class="tool-link-box" onclick="trackToolClick('Fire Extinguisher Calculator')">
+                            <span class="tool-icon">🧯</span>
+                            <div class="tool-info">
+                                <h4>Fire Extinguisher Calculator</h4>
+                                <p>Estimation tool for extinguisher requirements</p>
+                            </div>
+                        </a>
+                        
+                        <a href="https://firesafetyassessmenttool.vercel.app/" target="_blank" class="tool-link-box" onclick="trackToolClick('Fire Safety Assessment')">
+                            <span class="tool-icon">📊</span>
+                            <div class="tool-info">
+                                <h4>Fire Safety Assessment Tool</h4>
+                                <p>Complete residential fire safety assessment</p>
+                            </div>
+                        </a>
                     </div>
-                    
-                    <div class="tool-item">
-                        <h4>🛡️ HSE Calculator</h4>
-                        <p>Health, Safety & Environment calculators for workplace safety compliance, risk assessments, regulatory tools, and professional HSE management.</p>
-                        <a href="https://www.hsecalculator.com" target="_blank" class="tool-link-report" onclick="trackToolClick('HSE Calculator')">Visit Tool →</a>
+                </div>
+                
+                <!-- More Fire Safety Tools -->
+                <div class="tools-category-box">
+                    <h3 class="tools-category-title">🔥 More Fire Safety Tools</h3>
+                    <div class="tools-links-list">
+                        <a href="https://kitchen-fire-suppression-calculator.vercel.app/" target="_blank" class="tool-link-box" onclick="trackToolClick('Kitchen Suppression')">
+                            <span class="tool-icon">👨‍🍳</span>
+                            <div class="tool-info">
+                                <h4>Kitchen Suppression Calculator</h4>
+                                <p>Kitchen fire suppression system estimation</p>
+                            </div>
+                        </a>
+                        
+                        <a href="https://fm-200-room-flooding-system-calcula.vercel.app/" target="_blank" class="tool-link-box" onclick="trackToolClick('FM-200 Calculator')">
+                            <span class="tool-icon">🌊</span>
+                            <div class="tool-info">
+                                <h4>FM-200 Room Flooding Calculator</h4>
+                                <p>Clean agent fire suppression calculations</p>
+                            </div>
+                        </a>
+                        
+                        <a href="https://panel-fire-suppression-calculator.vercel.app/index.html" target="_blank" class="tool-link-box" onclick="trackToolClick('Panel Fire Suppression')">
+                            <span class="tool-icon">⚡</span>
+                            <div class="tool-info">
+                                <h4>Panel Fire Suppression Calculator</h4>
+                                <p>Electrical panel fire suppression calculations</p>
+                            </div>
+                        </a>
                     </div>
-                    
-                    <div class="tool-item">
-                        <h4>🌐 Web Tools Daily</h4>
-                        <p>Daily updated collection of web tools, calculators, converters, utilities, and resources for developers, professionals, and general users.</p>
-                        <a href="https://www.webtoolsdaily.com" target="_blank" class="tool-link-report" onclick="trackToolClick('Web Tools Daily')">Visit Tool →</a>
+                </div>
+                
+                <!-- HSE & Utility Tools -->
+                <div class="tools-category-box">
+                    <h3 class="tools-category-title">⚕️ HSE & Utility Tools</h3>
+                    <div class="tools-links-list">
+                        <a href="https://www.hsecalculator.com/" target="_blank" class="tool-link-box" onclick="trackToolClick('HSE Calculator')">
+                            <span class="tool-icon">🛡️</span>
+                            <div class="tool-info">
+                                <h4>HSE Calculator</h4>
+                                <p>Health, Safety & Environment calculators</p>
+                            </div>
+                        </a>
+                        
+                        <a href="https://hse-toolkit.vercel.app/" target="_blank" class="tool-link-box" onclick="trackToolClick('HSE Toolkit')">
+                            <span class="tool-icon">🧰</span>
+                            <div class="tool-info">
+                                <h4>HSE Toolkit</h4>
+                                <p>Complete HSE management tools</p>
+                            </div>
+                        </a>
+                        
+                        <a href="https://www.dailysmarttool.com/" target="_blank" class="tool-link-box" onclick="trackToolClick('Daily Smart Tool')">
+                            <span class="tool-icon">🔄</span>
+                            <div class="tool-info">
+                                <h4>Daily Smart Tool</h4>
+                                <p>Daily utility tools & calculators</p>
+                            </div>
+                        </a>
+                        
+                        <a href="https://www.webtoolsdaily.com/" target="_blank" class="tool-link-box" onclick="trackToolClick('Web Tools Daily')">
+                            <span class="tool-icon">🌐</span>
+                            <div class="tool-info">
+                                <h4>Web Tools Daily</h4>
+                                <p>Daily updated web tools collection</p>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -700,7 +878,14 @@
                         <p class="expert-role">Fire & Life Safety Consultant</p>
                         <div class="contact-info">
                             <p><strong>📞 Phone:</strong> +91-9750816163</p>
-                            <p><strong>📧 Email:</strong> samajthkhan.official@gmail.com</p>
+                            <p><strong>📧 Professional Email:</strong> contact@amjathkhan.com</p>
+                            <p><strong>📧 Personal Email:</strong> samajthkhan.official@gmail.com</p>
+                            <p><strong>🌐 Website:</strong> <a href="https://www.amjathkhan.com/" target="_blank">www.amjathkhan.com</a></p>
+                        </div>
+                        <div class="social-media-expert">
+                            <a href="https://www.facebook.com/Amjathkhan.s" target="_blank" class="social-btn">Facebook</a>
+                            <a href="https://x.com/amjikhan" target="_blank" class="social-btn">X/Twitter</a>
+                            <a href="https://www.linkedin.com/in/amjathkhan-shiekusman/" target="_blank" class="social-btn">LinkedIn</a>
                         </div>
                         <a href="https://www.safetyguide360.com" target="_blank" class="website-btn">
                             🌐 Visit SafetyGuide360.com
@@ -784,7 +969,8 @@
             
             <div class="footer-bottom">
                 <p>© 2024 Fire Safety Assessment Tool | Report generated on <span id="generationDate"></span></p>
-                <p>For more information visit: <a href="https://www.safetyguide360.com" target="_blank">www.safetyguide360.com</a></p>
+                <p>For more information visit: <a href="https://www.safetyguide360.com" target="_blank">www.safetyguide360.com</a> | <a href="https://www.amjathkhan.com/" target="_blank">www.amjathkhan.com</a></p>
+                <p>Contact: contact@amjathkhan.com | +91-9750816163</p>
             </div>
         </footer>
     </div>
@@ -802,7 +988,7 @@
             style.textContent = `
                 @media print {
                     .amazon-banner, .coffee-btn, .action-buttons, .support-section,
-                    .product-card, .website-btn, .more-tools-section {
+                    .product-card, .website-btn, .more-tools-section, .complete-tools-section {
                         display: none !important;
                     }
                     body { font-size: 12pt; }
@@ -971,13 +1157,6 @@
             });
             
             element.innerHTML = html;
-        }
-
-        function downloadPDF() {
-            // In a real implementation, this would generate a PDF
-            // For now, we'll use window.print() as a fallback
-            alert('PDF download would be implemented with a server-side component. For now, please use the Print function.');
-            window.print();
         }
 
         function trackToolClick(toolName) {
