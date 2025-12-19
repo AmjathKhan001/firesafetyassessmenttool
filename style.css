@@ -5,29 +5,29 @@
     box-sizing: border-box;
 }
 
+/* Update :root variables with new color scheme */
 :root {
-    --primary: #d32f2f;
-    --primary-dark: #b71c1c;
-    --primary-light: #ff6659;
-    --secondary: #1976d2;
-    --secondary-dark: #0d47a1;
-    --accent: #ff9800;
-    --success: #4caf50;
-    --warning: #ff9800;
-    --danger: #f44336;
-    --info: #2196f3;
+    --primary: #ff4c4c;       /* Red */
+    --primary-dark: #cc0000;
+    --primary-light: #ff8080;
+    --secondary: #0099e5;     /* Blue */
+    --secondary-dark: #0077b3;
+    --accent: #34bf49;        /* Green */
+    --accent-dark: #28a745;
+    --black: #000000;
+    --white: #ffffff;
     
-    --text-dark: #2c3e50;
-    --text-medium: #546e7a;
-    --text-light: #78909c;
+    --text-dark: #333333;
+    --text-medium: #666666;
+    --text-light: #999999;
     
     --bg-white: #ffffff;
-    --bg-light: #f5f7fa;
-    --bg-lighter: #fafafa;
-    --bg-dark: #263238;
+    --bg-light: #f8f9fa;
+    --bg-lighter: #f1f3f5;
+    --bg-dark: #212529;
     
-    --border: #e0e0e0;
-    --border-light: #eeeeee;
+    --border: #dee2e6;
+    --border-light: #e9ecef;
     --shadow: 0 2px 8px rgba(0,0,0,0.1);
     --shadow-md: 0 4px 16px rgba(0,0,0,0.1);
     --shadow-lg: 0 8px 32px rgba(0,0,0,0.15);
